@@ -1293,3 +1293,9 @@ margin-top: 480px;
 .not-loaded * {
   animation-play-state: paused !important;
 }
+onload = () => {
+  const c = setTimeout(() => {
+    document.body.classList.remove("not-loaded");
+    clearTimeout(c);
+  }, 1000);
+};
